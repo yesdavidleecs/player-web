@@ -16,6 +16,7 @@ const Signup = () => {
     } else {
       setEmail("");
       setPassword("");
+      setPassword2("")
       const res = await signUp(email, password);
       if (res.error) seterror(res.error)
     }
@@ -43,6 +44,14 @@ const Signup = () => {
             placeholder="Your Password"
             required
             onChange={(e) => setPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            name="password2"
+            value={password2}
+            placeholder="Verify Your Password"
+            required
+            onChange={(e) => setPassword2(e.target.value)}
           />
           <button type="submit">Submit</button>
         </form>
