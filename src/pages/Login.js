@@ -10,6 +10,7 @@ const Login = () => {
     e.preventDefault();
     setEmail("");
     setPassword("");
+    console.log("logging in");
     const res = await logIn(email, password);
     if (res.error) seterror(res.error);
   };

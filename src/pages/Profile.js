@@ -8,7 +8,8 @@ const Profile = () => {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleLogout = async () => {
-     await logOut();
+      console.log("logout");
+      await logOut();
   
     };
   
@@ -19,7 +20,8 @@ const Profile = () => {
       <>
         <Navbar />
         <h1>Profile</h1>
-   <button onClick={handleLogout}>Logout</button>
+
+        <button onClick={handleLogout}>Logout</button>
       </>
     );
   };
