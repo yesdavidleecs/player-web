@@ -14,10 +14,11 @@ const Login = () => {
     const res = await logIn(email, password);
     if (res.error) seterror(res.error);
   };
+
   return (
     <>
       <Navbar />
-      {error ? <div>{error}</div> : null}
+      <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
